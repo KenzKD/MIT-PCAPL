@@ -49,7 +49,7 @@ __global__ void MatMulti_2c(int* A, int* B, int* C, int width)
     int row = threadIdx.y;
     C[row * width + col] = 0;
     for (int i = 0; i < width; i++)
-        C[row * width + col] += A[row * width + i] * B[col + i * width];
+        C[row * width + col] += A[row * width + i] * B[i * width + col];
 }
 
 __global__ void MatMulti_2d(int* A, int* B, int* C, int width)
@@ -59,7 +59,7 @@ __global__ void MatMulti_2d(int* A, int* B, int* C, int width)
     C[row * width + col] = 0;
     //calculating one element
     for (int i = 0; i < width; i++)
-        C[row * width + col] += A[row * width + i] * B[col + i * width];
+        C[row * width + col] += A[row * width + i] * B[i * width + col];
 }
 
 void MatMulti(int* h_A, int* h_B, int* h_C, int width)
