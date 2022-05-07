@@ -1,0 +1,5 @@
+1)1D convolution
+	*Basic
+	*Shared(tiled 1D)
+	*constant("")
+2)SpvM(sparse matrix)(CSR)

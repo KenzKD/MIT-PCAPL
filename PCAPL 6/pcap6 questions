@@ -1,0 +1,11 @@
+1) Write a CUDA program to read a sentence with equal length words. Count the no. of times a given word is repeated in the sentence. Use Atomic functions.
+
+Sample string: Pcap EEFM exam Pcap test Pcap
+Word: Pcap
+Given word repeated 3 times 
+
+2)Write a CUDA program to multiply 2 matrixes for the following specification:
+	a) Each row resultant matrix to be computed by 1 thread
+	b) Each column resultant matrix to be computed by 1 thread
+	c) Each element of resultant matrix to be computed by 1 thread
+	d) Using 2D Grid and 2D Block
