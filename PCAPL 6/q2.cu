@@ -58,8 +58,8 @@ __global__ void MatMulti_2d(int* A, int* B, int* C, int width)
     int col = blockIdx.x * blockDim.x + threadIdx.x;
     C[row * width + col] = 0;
     //calculating one element
-    for (int k = 0; k < width; k++)
-        C[row * width + col] += A[row * width + k] * B[k * width + col];
+    for (int i = 0; i < width; i++)
+        C[row * width + col] += A[row * width + i] * B[col + i * width];
 }
 
 void MatMulti(int* h_A, int* h_B, int* h_C, int width)
